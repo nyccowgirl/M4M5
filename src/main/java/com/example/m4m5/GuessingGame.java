@@ -59,7 +59,6 @@ public class GuessingGame extends Application {
 
     private void handlePlayButton(ActionEvent event) {
         target = ((int) (Math.random()*(101 - 1))) + 1;
-        System.out.println(target);
     }
 
     private void processTextField(ActionEvent event) {
@@ -78,6 +77,7 @@ public class GuessingGame extends Application {
                     result.setText("Congratulations! You guessed correctly! " +
                             "\nClick on 'Let's Play!' if you want to play again.");
                     result.setFont(Font.font("Copperplate Gothic Bold",24));
+                    target = 0;
                 }
 
             } catch(NumberFormatException exception) {
